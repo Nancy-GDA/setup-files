@@ -1,0 +1,15 @@
+[user]
+	name = Nancy Gonzalez
+	email = nancy.glez.dea@gmail.com
+[init]
+	defaultBranch = main
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+	lod = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+	save = !git add -A && git commit
+	done = !git push origin HEAD
+[core]
+	editor = code --new-window --wait
