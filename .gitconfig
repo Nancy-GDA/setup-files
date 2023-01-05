@@ -28,3 +28,5 @@
   res = !git reset --hard
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
