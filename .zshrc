@@ -98,4 +98,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
+<<<<<<< HEAD
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+=======
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+>>>>>>> bd88ac3 (chore: commit save point)

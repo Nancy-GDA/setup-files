@@ -1,15 +1,30 @@
 [user]
-	name = Nancy Gonzalez
-	email = nancy.glez.dea@gmail.com
+  name = Nancy-GDA
+  email = nancy.glez.dea@gmail.com
+
+[core]
+  editor = code --wait
+
+[merge]
+  tool = vscode
+
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+[diff]
+    tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[alias]
+  st = status
+  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  ci = commit -s
+  b = branch
+  save = !git add -A && git commit -m 'chore: commit save point'
+  done = !git push origin HEAD
+  co = checkout
+  lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+  res = !git reset --hard
 [init]
 	defaultBranch = main
-[alias]
-	co = checkout
-	br = branch
-	st = status
-	ci = commit
-	lod = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
-	save = !git add -A && git commit
-	done = !git push origin HEAD
-[core]
-	editor = code --new-window --wait
